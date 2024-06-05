@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./globals.css";
+import { AppBar } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "Stackline Assessment",
@@ -13,7 +15,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AppBar
+          sx={{
+            backgroundColor: "#000080",
+            paddingX: 4,
+            paddingY: {
+              md: 4,
+              xs: 2
+            }
+          }}
+        >
+          <Image
+            src="stackline_logo.svg"
+            height={20}
+            width={100}
+          />
+        </AppBar>
+        {children}
+      </body>
     </html>
   );
 }
