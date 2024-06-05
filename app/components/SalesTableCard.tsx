@@ -1,11 +1,9 @@
-import { useState } from "react";
-import { Card, Table, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
+import { Card } from "@mui/material";
 
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, type GridColDef } from "@mui/x-data-grid";
 import { useAppSelector } from "@/lib/hooks";
 
 export default function SalesTableCard() {
-  const [sortBy, setSortBy] = useState(0);
   const data = useAppSelector(state => state.product.sales);
 
   const columns: GridColDef<(typeof data)[number]>[] = [
