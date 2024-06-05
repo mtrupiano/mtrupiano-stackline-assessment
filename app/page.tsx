@@ -1,15 +1,15 @@
 "use client"
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
-import { AppBar, Container, Grid, Skeleton, Stack } from "@mui/material";
+import { Grid, Skeleton, Stack } from "@mui/material";
 
 import ProductInfoCard from "./components/ProductInfoCard"
 import SalesTableCard from "./components/SalesTableCard";
 import SalesGraphCard from "./components/SalesGraphCard";
 
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
-import { loadProductData } from "@/lib/features/product/productSlice";
+import { loadProductData } from "@/lib/features/product/productSlice"; 
 
 export default function Home() {
 
