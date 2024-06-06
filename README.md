@@ -1,4 +1,4 @@
-This is my submission for Stackline's front end assessment. This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). 
+This is my submission for Stackline's front end assessment. This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). While this assessment was a bit of a challenge in a couple ways I still had a great time working on it! Thank you for your consideration.
 
 Admittedly I spent about 5 hours working on this. I definitely had to spend a good amount of time:
 
@@ -23,5 +23,3 @@ I admittedly am not entirely familiar with the best practices for loading data f
 
 ### Material UI's Line Chart component
 As you can see from the deployed application, the line chart is not the most aesthetically appealing data display. This is my first time working with this specific MUI component and there is some functionality that was a bit unintuive for me. Namely there is no way to fully customize the axis interval ticks and labels. These ticks are generated almost entirely based on the data provided to the axis property. I spent probably about 2 hours trying to fennagle a work-around to get the x-axis to look like the mock up (i.e. specifically only show the 3-letter month names). [As you can see in the docs](https://mui.com/x/api/charts/axis-config/), there is no way to fully customize the number of ticks (the 'tickNumber' property straight up says it might be ignored). 
-
-While this assessment was a bit of a challenge in a couple ways I still had a great time working on it! Thank you for your consideration.
