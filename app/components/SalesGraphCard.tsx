@@ -1,6 +1,6 @@
 import { useAppSelector } from "@/lib/hooks";
 import { Card } from "@mui/material";
-import { ChartContainer, LineChart, LinePlot } from "@mui/x-charts";
+import { LineChart } from "@mui/x-charts";
 
 export default function SalesGraphCard() {
   const salesData = useAppSelector(state => state.product.sales);
@@ -12,9 +12,14 @@ export default function SalesGraphCard() {
         dataset={salesData}
         xAxis={[{
           data: salesData.map(entry => new Date(entry.weekEnding)),
-          valueFormatter: (value) => {
+          valueFormatter: (value, context) => {
             const date = new Date(value);
-            return date.getUTCFullYear() + '/' + (date.getUTCMonth()+1) + '/' + date.getUTCDate();
+            return date.toLocaleDateString("en-ZA", {
+              timeZone: "UTC",
+              day: "2-digit",
+              month: "2-digit",
+              year: "numeric"
+            });
           },
         }]}
         series={[
