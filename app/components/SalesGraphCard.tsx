@@ -12,7 +12,7 @@ export default function SalesGraphCard() {
         dataset={salesData}
         xAxis={[{
           data: salesData.map(entry => new Date(entry.weekEnding)),
-          valueFormatter: (value, context) => {
+          valueFormatter: (value) => {
             const date = new Date(value);
             return date.toLocaleDateString("en-ZA", {
               timeZone: "UTC",
